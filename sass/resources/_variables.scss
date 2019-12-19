@@ -1,0 +1,24 @@
+
+
+$font_header: "Pacifico", cursive;
+$font_content: "Roboto Mono", monospace;
+
+
+$gutter_s: 10px;
+$gutter_m: 20px;
+
+
+@mixin flex_styles(
+  $display: flex,
+  $flex_direction: null,
+  $align_items: null,
+  $flex_wrap: null,
+  $justify_content: null,
+) {
+  display: $display;
+  flex-direction: $flex_direction;
+  align-items: $align_items;
+  flex-wrap: $flex_wrap;
+  justify-content: $justify_content;
+};
+

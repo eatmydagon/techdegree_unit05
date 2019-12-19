@@ -1,0 +1,62 @@
+
+
+/* ======================================================
+=========================================================
+                      MAIN STYLES
+=========================================================
+=========================================================*/
+
+body {
+  @include flex_styles($flex_direction: column, $align_items: center);
+  min-height: 100vh;
+}
+
+
+.header h1 {
+  margin: 0;
+  padding: $gutter_m 0;
+  text-align: center;
+}
+
+
+
+
+.gallery {
+  @include flex_styles($flex_wrap: wrap, $justify_content: space-around);
+  width: 80%;
+  margin: 0 auto;
+  padding: $gutter_m 0 0;
+  a {
+    display: inline-block;
+    margin: 0 0 $gutter_m;
+  }
+}
+
+@for $index from 1 through 12 {
+ .gallery {
+    a:nth-of-type(#{$index}) {
+      flex-basis: 22%;
+    }
+  }
+}
+
+
+#baguetteBox-overlay .full-image{
+  figure {
+    display: inline-block;
+    width: 80%;
+    height: auto;
+    position: relative;
+  }
+  figcaption {
+    width: 70%;
+    left: 15%;
+    bottom: -15%;
+    background: none;
+  }
+}
+
+
+.footer {
+  margin-top: auto;
+}
