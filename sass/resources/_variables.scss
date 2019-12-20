@@ -8,6 +8,11 @@ $gutter_s: 10px;
 $gutter_m: 20px;
 
 
+$break_s: 570px;
+$break_m: 750px;
+$break_l: 1200px;
+
+
 @mixin flex_styles(
   $display: flex,
   $flex_direction: null,
@@ -22,3 +27,9 @@ $gutter_m: 20px;
   justify-content: $justify_content;
 };
 
+
+@mixin media_query($width: 1px, $orientation: null) {
+  @media only screen and (min-width: $width) {
+    @content; 
+  }
+};

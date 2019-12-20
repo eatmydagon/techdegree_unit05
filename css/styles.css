@@ -366,6 +366,21 @@ html {
   letter-spacing: 4px;
 }
 
+.search {
+  font-weight: bold;
+}
+
+.footer span {
+  font-size: 1rem;
+}
+.footer p {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.footer a {
+  color: blue;
+}
+
 /* ======================================================
 =========================================================
                       MAIN STYLES
@@ -376,25 +391,87 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  background: url("../resources/just-waves.png") repeat;
 }
 
+main {
+  width: 100%;
+}
+
+/* ======================================================
+                      HEADER
+=========================================================*/
+.header {
+  width: 100%;
+  background-color: rgba(179, 214, 255, 0.8);
+  padding: 20px 0;
+}
 .header h1 {
   margin: 0;
   padding: 20px 0;
   text-align: center;
 }
 
+/* ======================================================
+                      SEARCH
+=========================================================*/
+.search {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.search label {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+.search input {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.search input:focus {
+  outline: none;
+}
+@media only screen and (min-width: 570px) {
+  .search input {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 750px) {
+  .search input {
+    width: 40%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .search input {
+    width: 25%;
+  }
+}
+
+/* ======================================================
+                      GALLERY
+=========================================================*/
 .gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   width: 80%;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 20px 0 0;
 }
 .gallery a {
   display: inline-block;
-  margin: 0 0 20px;
+  margin: 0 10px 20px;
+  text-align: center;
+}
+.gallery img {
+  opacity: 0.9;
 }
 
 .gallery a:nth-of-type(1) {
@@ -445,21 +522,68 @@ body {
   flex-basis: 22%;
 }
 
+/* ======================================================
+                    FOOTER
+=========================================================*/
+.footer {
+  margin-top: auto;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* ======================================================
+                         baguetteBox Pluggin 
+=========================================================*/
 #baguetteBox-overlay .full-image figure {
   display: inline-block;
-  width: 80%;
+  width: 100%;
   height: auto;
   position: relative;
 }
+@media only screen and (min-width: 1200px) {
+  #baguetteBox-overlay .full-image figure {
+    height: 80%;
+    width: auto;
+  }
+}
 #baguetteBox-overlay .full-image figcaption {
-  width: 70%;
-  left: 15%;
-  bottom: -15%;
-  background: none;
+  width: 100%;
+  left: 0;
+  bottom: -40%;
+}
+@media only screen and (min-width: 570px) {
+  #baguetteBox-overlay .full-image figcaption {
+    bottom: -20%;
+  }
+}
+@media only screen and (min-width: 750px) {
+  #baguetteBox-overlay .full-image figcaption {
+    bottom: -10%;
+    background: none;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #baguetteBox-overlay .full-image figcaption {
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
 }
 
-.footer {
-  margin-top: auto;
+#baguetteBox-overlay #previous-button {
+  top: 85%;
+}
+@media only screen and (min-width: 750px) {
+  #baguetteBox-overlay #previous-button {
+    top: calc(50% - 30px);
+  }
+}
+#baguetteBox-overlay #next-button {
+  top: 85%;
+}
+@media only screen and (min-width: 750px) {
+  #baguetteBox-overlay #next-button {
+    top: calc(50% - 30px);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
